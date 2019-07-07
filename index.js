@@ -1,4 +1,4 @@
 // Add your functions here
 function map(sourceArray, funct) {
-  return funct(sourceArray)
+  return sourceArray.map(funct(x))
 }
