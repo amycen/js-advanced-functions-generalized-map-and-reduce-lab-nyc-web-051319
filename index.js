@@ -4,5 +4,5 @@ function map(sourceArray, funct) {
 }
 
 function reduce(sourceArray, funct, startingPoint=0) {
-  return sourceArray.reduce((accum, element) => funct(element), startingPoint)
+  return sourceArray.reduce((accum, element) => funct(element, accum), startingPoint)
 }
