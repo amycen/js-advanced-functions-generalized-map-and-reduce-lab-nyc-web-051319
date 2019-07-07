@@ -4,5 +4,12 @@ function map(sourceArray, funct) {
 }
 
 function reduce(sourceArray, funct, startingPoint=0) {
-  return sourceArray.reduce((accum, element) => funct(element, startingPoint || accum), startingPoint)
+    let starting = (!!startingPoint) ? startingPoint : sourceArray[0]
+    let i = (!!starting) ? 0 : 1
+
+    while(i < sourceArray.length){
+      starting = funct(sourceArray[i], starting)
+      i++
+    }
+    return starting
 }
