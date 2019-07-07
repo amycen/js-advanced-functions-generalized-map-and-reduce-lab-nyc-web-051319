@@ -4,5 +4,5 @@ function map(sourceArray, funct) {
 }
 
 function reduce(sourceArray, funct, startingPoint=0) {
-  
+
 }
